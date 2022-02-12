@@ -13,5 +13,7 @@ public class Long {
         System.out.println(maxLong);
         System.out.println(minLong);
 
+        System.out.println( 'g' + 'k' + "" + 'h' + 'g');
+
     }
 }
