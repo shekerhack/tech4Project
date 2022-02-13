@@ -8,7 +8,7 @@ public class LearningScannerPrimitiveMethods {
         How to use Scanner methods
         1.Create an object of Scanner (import the class as well)
         We create an object: ClassName/DataType variable/objectName = mew ClassName/DataType(if it is needed);
-        2. variableName/objectName.methodName(if it is neede parameter);
+        2. variableName/objectName.methodName(if it is needed parameter);
          */
 
         /*
