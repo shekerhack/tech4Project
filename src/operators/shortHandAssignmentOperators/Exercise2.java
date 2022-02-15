@@ -28,9 +28,9 @@ public class Exercise2 {
         System.out.println("Please enter your balance:");
         double balance = transactionInput.nextDouble();
 
-        System.out.println("Enter yor 1st transaction:");
+        System.out.println("Enter your 1st transaction:");
         double firstTran = transactionInput.nextDouble();
-        balance -= firstTran; //balance has changed
+        balance = firstTran; //balance has changed
         System.out.println("Balance after 1st transaction = $" + balance);
 
         System.out.println("Enter your 2nd transaction:");
