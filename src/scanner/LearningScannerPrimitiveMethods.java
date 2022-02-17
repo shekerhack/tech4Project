@@ -1,5 +1,4 @@
 package scanner;
-import primitives.Int;
 
 import java.util.Scanner;
 public class LearningScannerPrimitiveMethods {

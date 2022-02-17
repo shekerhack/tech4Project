@@ -65,5 +65,7 @@ public class ScannerExercises {
 
         System.out.println("Sum of the number is = " + (num1 + num2 + num3));
 
+
+
     }
 }

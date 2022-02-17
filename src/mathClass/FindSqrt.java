@@ -1,7 +1,7 @@
 package mathClass;
 
 public class FindSqrt {
-    public static void main(String[] srgs) {
+    public static void main(String[] args) {
 
 
         int a = 36;
@@ -11,5 +11,10 @@ public class FindSqrt {
 
         System.out.println(
                 "sqrt a = " + Math.sqrt(a) + "\nsqrt b = " + Math.sqrt(b) + "\nsqrt c = " + Math.sqrt(c) + "\nsqrt d = " + Math.sqrt(d));
+
+        Math.sqrt(6 - 10 + 4 + 1 + 65 - 34 * 12 / 23 % 12);
+        // 6 - 10 + 4 + 1 + 65 - 34 * 12 /23 % 12
+        //6, 4
+        System.out.println(Math.sqrt(6 - 10 + 4 + 1 + 65 -34 * 12 / 23 % 12));
     }
 }
