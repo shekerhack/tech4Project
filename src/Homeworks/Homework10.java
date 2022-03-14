@@ -23,22 +23,22 @@ public class Homework10 {
     Last char is = t
     This String has vowel
          */
-        String s1 = "";
+        String s = "";
 
+        if (s.isEmpty()){ // s.length() == 0 | s.length() < 1
+            System.out.println("Length is zero");
+        }else{
+            System.out.println("Length is = " + s.length());
+            System.out.println("First char is = " + s.charAt(0));
+            System.out.println("Last char is = " + s.charAt(s.length() - 1));
 
-
-
-        for (int i = 0; i < s1.length(); i++) {
-            System.out.println("Length is = " + s1.length());
-
-            if (i > 0 && s1.contains("a") || s1.contains("A") || s1.contains("e") || s1.contains("E") ||
-                    s1.contains("i") || s1.contains("I") || s1.contains("u") || s1.contains("U") || s1.contains("o") || s1.contains("O")) {
-                System.out.println("First char is = " + s1.charAt(0) + "\nLast char is = " + s1.charAt(s1.length() - 1));
-                System.out.println("This string has a vowel");
-                break;
-
+            if (s.toLowerCase().contains("a") || s.toLowerCase().contains("e") || s.toLowerCase().contains("i")
+                    || s.toLowerCase().contains("o") || s.toLowerCase().contains("u")){
+                System.out.println("This String has vowel");
+            }else{
+                System.out.println("This String does not have vowel");
             }
-            }
+        }
 
         /*
         Task-2
@@ -97,7 +97,6 @@ public class Homework10 {
             } else {
                 System.out.println("INVALID INPUT");
 
-
             }
 
         /* Task-4
@@ -139,12 +138,9 @@ public class Homework10 {
 
         for(int b = 0; b <= s6.length(); b++) {
             System.out.print(s6.substring(1, s6.length() - 1));
-
         }
-
             }
         }
-
         else{
             System.out.println("INVALID INPUT");
         }
@@ -170,10 +166,7 @@ public class Homework10 {
             System.out.println("INVALID INPUT");
         }
 
-
         }
-
-
     }
 
 

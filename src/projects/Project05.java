@@ -205,6 +205,8 @@ public class Project05 {
 
             if (i % 5 != 0) s += i + " - "; // other way to prevent dash at the: if(i ==25) System.out.print(i); else System.out.print(i + "-");
         }
+        if(!s.isEmpty()) System.out.println(s.substring(0, s.length()-3));
+        else System.out.println(s); // without dash at the end.
 
         }
 

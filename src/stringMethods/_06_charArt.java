@@ -14,10 +14,10 @@ public class _06_charArt {
          */
         String name = "John";
 
-        System.out.println(name.charAt(0));
-        System.out.println(name.charAt(1));
-        System.out.println(name.charAt(2));
-        System.out.println(name.charAt(3));
+        System.out.println(name.charAt(0)); // J
+        System.out.println(name.charAt(1)); // o
+        System.out.println(name.charAt(2)); // h
+        System.out.println(name.charAt(3));  // n
 
         //System.out.println(name.charAt(4)); // -1, 4
 

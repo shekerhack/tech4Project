@@ -42,7 +42,6 @@ public class AskUser10 {
         System.out.println("\n----do while----\n");
 
         do {
-            System.out.println("Please enter a number");
             number = ScannerHelper.getNumberFromUser();
         } while (number < 10) ;
 
