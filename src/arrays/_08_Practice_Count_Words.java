@@ -28,6 +28,7 @@ public class _08_Practice_Count_Words {
         }
         System.out.println(count);
 
+
         System.out.println("\n--------TASK-1--Other Way------\n");
 
         String s = "Today is Tuesday"; // {"Today", "is", "Tuesday"}
