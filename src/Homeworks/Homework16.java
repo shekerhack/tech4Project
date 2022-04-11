@@ -302,13 +302,5 @@ public class Homework16 {
 
         System.out.println(findClosestTo10(num1));
 
-
-
-
-
-
-
-
-
     }
 }
