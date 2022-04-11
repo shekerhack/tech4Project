@@ -24,7 +24,7 @@ public class _02_Practice_Remove_Duplicates {
          */
         List<String> unique = new ArrayList<>();
 
-        for (String object :objects) {
+        for (String object : objects) {
             if(!unique.contains(object)) unique.add(object);
 
         }

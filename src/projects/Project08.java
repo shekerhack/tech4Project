@@ -123,6 +123,32 @@ public class Project08 {
         }else return false;
     }
 
+    //Other way doing it
+
+     /*
+    Write a method that takes
+     */
+
+    // Solution without regex
+
+    public static boolean validatePassword2(String str){
+        if(str.contains(" ") || str.length() < 8 || str.length() > 16) return false;
+
+        boolean upperCase = false;
+        boolean lowerCase = false;
+        boolean digit = false;
+        boolean special = false;
+
+
+        for(char c : str.toCharArray()){
+            if(Character.isUpperCase(c)) upperCase = true;
+            else if(Character.isLowerCase(c)) lowerCase = true;
+            else if(Character.isDigit(c)) digit = true;
+            else special = true;
+        }
+        return upperCase && lowerCase && digit && special;
+    }
+
 
     /*
     TASK-4 - validateEmailAddress() method
@@ -171,29 +197,32 @@ public class Project08 {
 
     public static boolean validateEmailAddress(String email) {
 
-        boolean flag = false;
-        char second = Character.toLowerCase(email.charAt(1));
-
-
-            for (int i = 0; i < email.length(); i++) {
-                if (!Character.isWhitespace(email.charAt(i)) && !email.contains("@@"))
-                    if( second >= 'a' && second <= 'z')
-                        if(email.charAt(i) == 'g' && email.charAt(i + 1) == 'm' && email.charAt(i + 2) == 'a'
-                                && email.charAt(i + 3) == 'i' && email.charAt(i + 4) == 'l' )
-                           if(email.endsWith("com"))
-                    flag = true;
-
-            }
-
-        return flag;
+        if (email.contains(" ")) return false;
+        if (email.contains("@") && email.contains(".")) {
+            String[] split1 = email.split("@");
+            String[] split2 = split1[1].split("\\.");//in java "."needs to use together "\\."
+            return split1[0].length() > 2 && split2[0].length() > 2 && split2[1].length() > 2;
+        }
+        return false;
     }
 
+    // Other way of Task-4
 
-
-
-
-
-
+    public static boolean validateEmailAddress2(String email) {
+        int count = 0;
+        for (int i = 0; i < email.length(); i++) {
+            if ('@' == email.charAt(i))
+                count++;
+        }
+        int leastFirstTwoChars = email.indexOf('@');
+        int leastTwoMiddleChars = email.substring(email.indexOf("@") + 1, email.indexOf(".")).length();
+        int leastLastTwoChars = email.substring(email.indexOf('.') + 1).length();
+        if (email.contains(" ") == false && count == 1 && leastFirstTwoChars > 2 && leastTwoMiddleChars > 2 && leastLastTwoChars > 2) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
     public static void main(String[] args) {
 
@@ -223,17 +252,25 @@ public class Project08 {
         System.out.println(Project08.validateEmailAddress(password4));
         System.out.println(Project08.validateEmailAddress(password5));
 
+        System.out.println("\n----Task-3--Other way--\n");
+
+        System.out.println(validatePassword2("")); // false
+        System.out.println(validatePassword2("abc")); // false
+        System.out.println(validatePassword2("Abcd1234")); // false
+        System.out.println(validatePassword2("Abc12$")); // false
+        System.out.println(validatePassword2("Abc d512$")); // false
+        System.out.println(validatePassword2("Abcd512$abcdefdabc")); // false
+        System.out.println(validatePassword2("Abcd132!")); // true
+
+
         System.out.println("\n----Task-4----\n");
 
         String email1= "a@gmail.com";
         String email2 = "abc@g.com";
         String email3 = "abc@gmail.c";
        String email4 = "abcd@gmail.com";
+        String email5 = "abc@@gmail.com";
 
-        System.out.println(Project08.validateEmailAddress(email1));
-        System.out.println(Project08.validateEmailAddress(email2));
-        System.out.println(Project08.validateEmailAddress(email3));
-        System.out.println(Project08.validateEmailAddress(email4));
 
 
 
