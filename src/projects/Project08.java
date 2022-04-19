@@ -106,32 +106,9 @@ public class Project08 {
 
          */
 
-    public static boolean validatePassword(String password) {
-
-        if(!password.contains(" ") && (password.length() >= 8 && password.length() <= 16)){
-            boolean hasLowerCase = false, hasUpperCase = false, hasDigit = false, hasSpecial = false;
-            for (int i = 0; i < password.length(); i++){
-                char c = password.charAt(i);
-                if (Character.isLetter(c)){
-                    if (Character.isLowerCase(c)) hasLowerCase = true;
-                    else if (Character.isUpperCase(c)) hasUpperCase = true;
-                }else if (Character.isDigit(c)) {
-                    hasDigit = true;
-                }else hasSpecial = true;
-            }
-            return (hasDigit && hasLowerCase && hasUpperCase && hasSpecial);
-        }else return false;
-    }
-
-    //Other way doing it
-
-     /*
-    Write a method that takes
-     */
-
     // Solution without regex
 
-    public static boolean validatePassword2(String str){
+    public static boolean validatePassword(String str){
         if(str.contains(" ") || str.length() < 8 || str.length() > 16) return false;
 
         boolean upperCase = false;
@@ -240,36 +217,22 @@ public class Project08 {
 
         System.out.println("\n----Task-3----\n");
 
-        String password1 = " ";
-        String password2 = "abcd";
-        String password3 = " abcd1234";
-        String password4 = " Abcd1234";
-        String password5 = " Abcd123!";
-
-        System.out.println(Project08.validatePassword(password1));
-       System.out.println(Project08.validatePassword(password2));
-       System.out.println(Project08.validatePassword(password3));
-        System.out.println(Project08.validateEmailAddress(password4));
-        System.out.println(Project08.validateEmailAddress(password5));
-
-        System.out.println("\n----Task-3--Other way--\n");
-
-        System.out.println(validatePassword2("")); // false
-        System.out.println(validatePassword2("abc")); // false
-        System.out.println(validatePassword2("Abcd1234")); // false
-        System.out.println(validatePassword2("Abc12$")); // false
-        System.out.println(validatePassword2("Abc d512$")); // false
-        System.out.println(validatePassword2("Abcd512$abcdefdabc")); // false
-        System.out.println(validatePassword2("Abcd132!")); // true
+        System.out.println(validatePassword("")); // false
+        System.out.println(validatePassword("abc")); // false
+        System.out.println(validatePassword("Abcd1234")); // false
+        System.out.println(validatePassword("Abc12$")); // false
+        System.out.println(validatePassword("Abc d512$")); // false
+        System.out.println(validatePassword("Abcd512$abcdefdabc")); // false
+        System.out.println(validatePassword("Abcd132!")); // true
 
 
         System.out.println("\n----Task-4----\n");
 
-        String email1= "a@gmail.com";
-        String email2 = "abc@g.com";
-        String email3 = "abc@gmail.c";
-       String email4 = "abcd@gmail.com";
-        String email5 = "abc@@gmail.com";
+        System.out.println(validateEmailAddress("a@gmail.com")); // false
+        System.out.println(validateEmailAddress("abc@g.com")); // false
+        System.out.println(validateEmailAddress("abc@gmail.c")); // false
+        System.out.println(validateEmailAddress("abcd@gmail.com")); //true
+        System.out.println(validateEmailAddress("abc@@gmail.com")); //false
 
 
 

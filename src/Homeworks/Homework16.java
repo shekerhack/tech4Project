@@ -173,12 +173,10 @@ public class Homework16 {
 
     public static String removeExtraSpaces(String str) {
 
-        String noExtraSpace = str;
-
-        while (noExtraSpace.contains("  ")) {
-            noExtraSpace = noExtraSpace.trim().replace("  ", " ");
+        while (str.contains("  ")) {
+            str = str.trim().replace("  ", " ");
         }
-        return noExtraSpace;
+        return str;
     }
 
     /*
@@ -223,6 +221,20 @@ public class Homework16 {
 
     }
 
+    // Other way of Task-7
+        public static int[] sumOfTwoIntArrays2(int[] arr1, int[] arr2) {
+
+        arr1[0] += arr2[0];
+        arr1[1] += arr2[1];
+        arr1[2] += arr2[2];
+
+        for(int i = 0; i < Math.min(arr1.length, arr2.length); i++){
+            if(arr1.length > arr2.length) arr1[i] += arr2[i];
+            else arr2[i] += arr1[i];
+        }
+        return(arr1.length > arr2.length) ? arr1 : arr2;
+        }
+
     /*
     TASK-8
     Requirement:
@@ -244,20 +256,13 @@ public class Homework16 {
 
     public static int findClosestTo10(int[] number) {
 
-        int closest = number[0]; //index of 0
+        int closest = Integer.MAX_VALUE;
+        Arrays.sort(number);
 
-        int distance = Math.abs(number[0] - 10);
-
-        for (int i = 1; i < number.length; i++) {
-            if (Math.abs(number[i] - 10) < distance) {
-                distance = Math.abs(number[i] - 10);
-                closest = number[i];
-            } else if (Math.abs(number[i] - 10) == distance) {
-                if (closest > number[i]) closest = number[i];
-            }
+        for(int i = 0; i < number.length; i++){
+            if(number[i] != 10 && Math.abs(10 - number[i]) < Math.abs(10 - closest)) closest = number[i];
         }
         return closest;
-
     }
 
 
@@ -298,7 +303,7 @@ public class Homework16 {
 
         System.out.println("\n-----Task-8----\n");
 
-        int num1[] = {10, -13, 5, 70, 15, 57};
+        int[] num1 = {10, -13, 5, 70, 15, 57};
 
         System.out.println(findClosestTo10(num1));
 
