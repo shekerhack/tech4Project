@@ -1,4 +1,4 @@
-package Homeworks;
+package homeworks;
 
 public class ExtraPractice {
          /*

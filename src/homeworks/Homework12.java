@@ -1,7 +1,6 @@
-package Homeworks;
+package homeworks;
 
 import java.util.Arrays;
-import java.util.Locale;
 
 public class Homework12 {
     public static void main(String[] args) {

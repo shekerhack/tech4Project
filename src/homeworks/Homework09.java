@@ -1,8 +1,6 @@
-package Homeworks;
+package homeworks;
 
 import utilities.ScannerHelper;
-
-import java.util.Locale;
 
 public class Homework09 {
     public static void main(String[] args) {

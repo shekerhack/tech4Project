@@ -1,6 +1,4 @@
-package Homeworks;
-
-import java.util.zip.GZIPInputStream;
+package homeworks;
 
 public class Homework01 {
     public static void main(String[] args) {
