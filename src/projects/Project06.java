@@ -44,18 +44,18 @@ public class Project06 {
 
         System.out.println("Please enter a word:");
         String word = userSentence.nextLine();
-        String reversedString = "";
+        String palindrome = "";
 
         //civic
         //01234
         if (!word.isEmpty()){
             // 4, 3, 2, 1, 0
             // 1st way
-            for (int i = word.length() - 1; i >= 0; i--) reversedString += word.charAt(i);
+            for (int i = word.length() - 1; i >= 0; i--) palindrome += word.charAt(i);
             // 2nd way
             //for (int i = 0; i < word.length(); i++) rWord += word.charAt(word.length() - 1 - i);
 
-            if (word.equals(reversedString)) System.out.println("This word is palindrome");
+            if (word.equals(palindrome)) System.out.println("This word is palindrome");
             else System.out.println("This word is not palindrome");
 
         }else{
