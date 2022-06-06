@@ -2,6 +2,7 @@ package collectionsFramework;
 
 import java.util.HashMap;
 import java.util.LinkedHashMap;
+import java.util.Map;
 import java.util.TreeMap;
 
 public class HashMapPractice {
@@ -53,6 +54,5 @@ public class HashMapPractice {
 
         System.out.println(students.size()); // 4
         System.out.println(students);
-
     }
-}
+    }
