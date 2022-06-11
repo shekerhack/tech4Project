@@ -180,7 +180,6 @@ public class Homework21 {
 
         System.out.println("\nTASK-5\n");
 
-// sheker
     }
 }
 
