@@ -26,4 +26,8 @@ public class Mock4 {
         }
         return unique;
     }
+
+    public static void main(String[] args) {
+        System.out.println(uniqueElement(new String[] {"Apple", "Apple", "Orange", "Apple", "Kiwi"}));
+    }
 }
