@@ -156,11 +156,24 @@ public class Homework21 {
     Expected Result 4: “2a2A1a”
      */
 
-    /*public static String countSequenceOfCharacters(String str) {
-    }*/
-
-
-
+    public static String countSequenceOfCharacters(String s) {
+        String str = "";
+        int count = 1;
+        if (s.length() == 0) return "";
+        else {
+            for (int i = 0; i < s.length() - 1; i++) {
+                count = 1;
+                if (("" + s.charAt(i)).equals("" + s.charAt(i + 1))) {
+                    count++;
+                    i = i + count - 1;
+                }
+                str += String.valueOf(count) + s.charAt(i);
+            }
+            if (!("" + s.charAt(s.length() - 1)).equals(("" + s.charAt(s.length() - 2))))
+                str += "1" + s.charAt(s.length() - 1);
+        }
+        return str;
+    }
 
 
     public static void main(String[] args) {
@@ -178,7 +191,8 @@ public class Homework21 {
         System.out.println("\nTASK-4\n" + findBiggestNumber("abc$") + "\n" + findBiggestNumber("a1b4c 6#") +
                 "\n" + findBiggestNumber("ab110c045d") + "\n" + findBiggestNumber("525"));
 
-        System.out.println("\nTASK-5\n");
+        System.out.println("\nTASK-5\n" + countSequenceOfCharacters("") + "\n" + countSequenceOfCharacters("abc") +
+                "\n" + countSequenceOfCharacters("abbcca") + "\n" + countSequenceOfCharacters("aaAa"));
 
     }
 }

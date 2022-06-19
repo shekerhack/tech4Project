@@ -234,7 +234,7 @@ public class Homework11 {
             n1 = n2;
             n2 = total;
         }
-        System.out.println(massage. substring(0, massage.length() - 3));  // without dash
+        System.out.println("\nTask-9\n" + massage. substring(0, massage.length() - 3));  // without dash
 
 
         /*
