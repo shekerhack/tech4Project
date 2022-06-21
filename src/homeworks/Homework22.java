@@ -178,7 +178,5 @@ public class Homework22 {
         System.out.println("\nTASK-5\n" + firstDuplicate(new int[]{}) +
                 "\n" + firstDuplicate(new int[]{1}) + "\n" + firstDuplicate(new int[]{1, 2, 2, 3}) +
                 "\n" + firstDuplicate(new int[]{1, 2, 3, 3, 4, 1}));
-
-
     }
 }
